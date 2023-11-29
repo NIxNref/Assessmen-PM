@@ -1,3 +1,5 @@
-# starbhak_fnb
+# Selanat datang di github saya di project Starbhak FNB
 
-A new Flutter project.
+
+
+        Starbhak FNB atau Starbhak Mart adalah project dari sekolah yang saya buat untuk Assessment semester 1 di kelas 11 
