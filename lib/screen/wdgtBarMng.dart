@@ -35,7 +35,7 @@ class BarMng extends StatelessWidget {
             child: FloatingActionButton(
               backgroundColor: const Color(0xFFF6F6F6),
               onPressed: () {
-                Navigator.pushNamed(context, 'data');
+                Navigator.pushNamed(context, 'profiles');
               },
               child: const Icon(Icons.person, color: Colors.black),
             ),
