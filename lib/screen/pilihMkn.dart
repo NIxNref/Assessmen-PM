@@ -1,95 +1,87 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class plhMkn extends StatelessWidget {
+class plhMkn extends StatefulWidget {
   const plhMkn({super.key});
 
   @override
+  _plhMknState createState() => _plhMknState();
+}
+
+class _plhMknState extends State<plhMkn> {
+  String selectedCategory = "All";
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-          padding: EdgeInsets.zero,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                height: 70.0,
-                width: 70.0,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                        'assets/img/gado_gado.jpg'), // Replace 'your_image_file.png' with your actual image file
-                    fit: BoxFit.cover,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          buildCategory("All", "assets/img/gado_gado.jpg"),
+          const SizedBox(width: 10),
+          buildCategory("Makanan", "assets/img/gado_gado.jpg"),
+          const SizedBox(width: 10),
+          buildCategory("Minuman", "assets/img/iced_tea.jpg"),
+        ],
+      ),
+    );
+  }
+
+  Widget buildCategory(String title, String imagePath) {
+    bool isSelected = selectedCategory == title;
+
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+      child: InkWell(
+        onTap: () {
+          setState(() {
+            selectedCategory = title;
+          });
+        },
+        child: Column(
+          children: [
+            Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(
+                color: isSelected ? Colors.blueAccent : Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: Colors.transparent,
+                  width: 1,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 5,
+                    offset: const Offset(0, 2),
                   ),
-                  color: Color(0xFFF6F6F6),
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color.fromRGBO(0, 0, 0, 0.4),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
+                ],
+              ),
+              child: Center(
+                child: Image.asset(
+                  imagePath,
+                  width: 60,
+                  height: 60,
+                  fit: BoxFit.cover,
                 ),
               ),
-              const SizedBox(
-                  height: 20.0), // Adjusted spacing between the two containers
-              Container(
-                height: 70.0,
-                width: 70.0,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                        'assets/img/gado_gado.jpg'), // Replace 'your_image_file.png' with your actual image file
-                    fit: BoxFit.cover,
-                  ),
-                  color: Color(0xFFF6F6F6),
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color.fromRGBO(0, 0, 0, 0.4),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                ),
+            ),
+            const SizedBox(height: 5),
+            Text(
+              title,
+              style: GoogleFonts.inter(
+                textStyle: const TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+                fontSize: 12,),
               ),
-              const SizedBox(
-                  height: 20.0), // Adjusted spacing between the two containers
-              Container(
-                height: 70.0,
-                width: 70.0,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                        'assets/img/gado_gado.jpg'), // Replace 'your_image_file.png' with your actual image file
-                    fit: BoxFit.cover,
-                  ),
-                  color: Color(0xFFF6F6F6),
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color.fromRGBO(0, 0, 0, 0.4),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
     );
   }
 }

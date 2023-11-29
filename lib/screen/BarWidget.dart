@@ -20,11 +20,11 @@ class AppBarse extends StatelessWidget {
               shape: BoxShape.circle,
             ),
             child: FloatingActionButton(
-              backgroundColor: Color(0xFFF6F6F6),
+              backgroundColor: const Color(0xFFF6F6F6),
               onPressed: (){
                 Navigator.pushNamed(context, 'manage');
               },
-              child: Icon(Icons.menu, color: Colors.black),
+              child: const Icon(Icons.menu, color: Colors.black),
             ),
           ),
           Container(
@@ -35,11 +35,11 @@ class AppBarse extends StatelessWidget {
               shape: BoxShape.circle,
             ),
             child: FloatingActionButton(
-              backgroundColor: Color(0xFFF6F6F6),
+              backgroundColor: const Color(0xFFF6F6F6),
               onPressed: () {
                 Navigator.pushNamed(context, 'data');
               },
-              child: Icon(Icons.person, color: Colors.black),
+              child: const Icon(Icons.person, color: Colors.black),
             ),
           ),
         ],

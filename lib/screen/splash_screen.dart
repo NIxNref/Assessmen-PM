@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:starbhak_fnb/screen/pilhanMenu.dart';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -15,10 +15,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 5),
+      const Duration(seconds: 5),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (BuildContext context) => pilihanMenu(),
+          builder: (BuildContext context) => const pilihanMenu(),
         ),
       ),
     );
@@ -29,26 +29,26 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        color: Color(0xf6f6f6ff),
+        color: const Color(0xf6f6f6ff),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Starbhak F&B',
               style: GoogleFonts.caveat(
-                color: Color.fromRGBO(80, 68, 68, 1),
+                color: const Color.fromRGBO(80, 68, 68, 1),
                 fontSize: 45,
               ),
             ),
             Text(
               'Selalu Memberikan Yang Terbaik',
               style: GoogleFonts.caveat(
-                color: Color.fromRGBO(80, 68, 68, 1),
+                color: const Color.fromRGBO(80, 68, 68, 1),
                 fontSize: 30,
               ),
             ),
-            SizedBox(height: 20),
-            CircularProgressIndicator(
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(
                 Color.fromRGBO(80, 68, 68, 1),
               ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class listMenu extends StatelessWidget {
+  const listMenu({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

@@ -27,14 +27,14 @@ class _cartDtState extends State<cartDt> {
                     shape: BoxShape.circle,
                   ),
                   child: FloatingActionButton(
-                    backgroundColor: Color(0xFFF6F6F6),
+                    backgroundColor: const Color(0xFFF6F6F6),
                     onPressed: () {
                       Navigator.pushNamed(context, 'main');
                     },
-                    child: Icon(Icons.arrow_back_outlined, color: Colors.red),
+                    child: const Icon(Icons.arrow_back_outlined, color: Colors.red),
                   ),
                 ),
-                Text(
+                const Text(
                   "Cart",
                   style: TextStyle(
                       fontSize: 20,
@@ -48,11 +48,11 @@ class _cartDtState extends State<cartDt> {
                     shape: BoxShape.circle,
                   ),
                   child: FloatingActionButton(
-                    backgroundColor: Color(0xFFF6F6F6),
+                    backgroundColor: const Color(0xFFF6F6F6),
                     onPressed: () {
                       Navigator.pushNamed(context, 'data');
                     },
-                    child: Icon(Icons.person, color: Colors.black),
+                    child: const Icon(Icons.person, color: Colors.black),
                   ),
                 ),
               ],
@@ -73,7 +73,7 @@ class _cartDtState extends State<cartDt> {
                         Container(
                           width: 50, // Set width as needed
                           height: 50, // Set height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape
                                 .rectangle, // You can use other shapes like BoxShape.rectangle
                             image: DecorationImage(
@@ -82,7 +82,7 @@ class _cartDtState extends State<cartDt> {
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Gado Gado',
                           style: TextStyle(
                             fontSize: 15,
@@ -90,7 +90,7 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Rp. 12.000',
                           style: TextStyle(
                             fontSize: 15,
@@ -98,7 +98,7 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        FloatingActionButton(
+                        const FloatingActionButton(
                           onPressed: null,
                           elevation: 0,
                           backgroundColor: Colors.transparent,
@@ -120,7 +120,7 @@ class _cartDtState extends State<cartDt> {
                         Container(
                           width: 50, // Set width as needed
                           height: 50, // Set height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape
                                 .rectangle, // You can use other shapes like BoxShape.rectangle
                             image: DecorationImage(
@@ -129,7 +129,7 @@ class _cartDtState extends State<cartDt> {
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Gado Gado',
                           style: TextStyle(
                             fontSize: 15,
@@ -137,7 +137,7 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Rp. 12.000',
                           style: TextStyle(
                             fontSize: 15,
@@ -145,7 +145,7 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        FloatingActionButton(
+                        const FloatingActionButton(
                           onPressed: null,
                           elevation: 0,
                           backgroundColor: Colors.transparent,
@@ -167,7 +167,7 @@ class _cartDtState extends State<cartDt> {
                         Container(
                           width: 50, // Set width as needed
                           height: 50, // Set height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape
                                 .rectangle, // You can use other shapes like BoxShape.rectangle
                             image: DecorationImage(
@@ -176,7 +176,7 @@ class _cartDtState extends State<cartDt> {
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Gado Gado',
                           style: TextStyle(
                             fontSize: 15,
@@ -184,7 +184,7 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Rp. 12.000',
                           style: TextStyle(
                             fontSize: 15,
@@ -192,7 +192,7 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        FloatingActionButton(
+                        const FloatingActionButton(
                           onPressed: null,
                           elevation: 0,
                           backgroundColor: Colors.transparent,
@@ -215,7 +215,7 @@ class _cartDtState extends State<cartDt> {
               color: Colors.black,
             ),
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+          const Row(mainAxisAlignment: MainAxisAlignment.start, children: [
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
             Text(
@@ -227,7 +227,7 @@ class _cartDtState extends State<cartDt> {
               ),
             )
           ]),
-          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+          const Row(mainAxisAlignment: MainAxisAlignment.start, children: [
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
             Text(
@@ -248,7 +248,7 @@ class _cartDtState extends State<cartDt> {
               ),
             )
           ]),
-          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+          const Row(mainAxisAlignment: MainAxisAlignment.start, children: [
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
             Text(
@@ -276,7 +276,7 @@ class _cartDtState extends State<cartDt> {
               color: Colors.black,
             ),
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+          const Row(mainAxisAlignment: MainAxisAlignment.start, children: [
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
             Text(

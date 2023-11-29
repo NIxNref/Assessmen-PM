@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class addDatas extends StatefulWidget {
-  const addDatas({Key? key}) : super(key: key);
+  const addDatas({super.key});
 
   @override
   _addDatasState createState() => _addDatasState();
@@ -75,7 +75,7 @@ class _addDatasState extends State<addDatas> {
             // Insert image here
             DropdownButtonFormField<String>(
               value: dropdownValue,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Select Category',
                 border: OutlineInputBorder(),
               ),
@@ -103,20 +103,14 @@ class _addDatasState extends State<addDatas> {
                 });
               },
             ),
-            SizedBox(height: 10),
-            Text('OR'),
+            const SizedBox(height: 10),
+            const Text('OR'),
             ElevatedButton(
               onPressed: _getImageFromGallery,
               child: const Text('Choose Image from Gallery'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              child: const Text(
-                'Submit',
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
               onPressed: () {
                 showDialog(
                   context: context,
@@ -143,6 +137,12 @@ class _addDatasState extends State<addDatas> {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFFF6F6F6),
+              ),
+              child: const Text(
+                'Submit',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
             ),
           ],

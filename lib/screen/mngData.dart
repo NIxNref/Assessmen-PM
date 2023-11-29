@@ -15,10 +15,10 @@ class _mngDatasState extends State<mngDatas> {
     return Scaffold(
       body: ListView(
         children: [
-          BarMng(),
+          const BarMng(),
           Row(
             children: [
-              Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
+              const Padding(padding: EdgeInsets.symmetric(horizontal: 10)),
               Container(
                 height: 40.0,
                 width: 150.0,
@@ -26,11 +26,11 @@ class _mngDatasState extends State<mngDatas> {
                   shape: BoxShape.rectangle,
                 ),
                 child: FloatingActionButton(
-                  backgroundColor: Color(0xFFF6F6F6),
+                  backgroundColor: const Color(0xFFF6F6F6),
                   onPressed: () {
                     Navigator.pushNamed(context, 'data');
                   },
-                  child: Row(
+                  child: const Row(
                     children: [
                       Padding(padding: EdgeInsets.symmetric(horizontal: 15)),
                       Text("Add Data"),
@@ -89,7 +89,7 @@ class _mngDatasState extends State<mngDatas> {
                         Container(
                           width: 50, // Set width as needed
                           height: 50, // Set height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape
                                 .rectangle, // You can use other shapes like BoxShape.rectangle
                             image: DecorationImage(
@@ -98,7 +98,7 @@ class _mngDatasState extends State<mngDatas> {
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Gado Gado',
                           style: TextStyle(
                             fontSize: 15,
@@ -106,7 +106,7 @@ class _mngDatasState extends State<mngDatas> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Rp. 12.000',
                           style: TextStyle(
                             fontSize: 15,
@@ -114,7 +114,7 @@ class _mngDatasState extends State<mngDatas> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        FloatingActionButton(
+                        const FloatingActionButton(
                           onPressed: null,
                           elevation: 0,
                           backgroundColor: Colors.transparent,
@@ -136,7 +136,7 @@ class _mngDatasState extends State<mngDatas> {
                         Container(
                           width: 50, // Set width as needed
                           height: 50, // Set height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape
                                 .rectangle, // You can use other shapes like BoxShape.rectangle
                             image: DecorationImage(
@@ -145,7 +145,7 @@ class _mngDatasState extends State<mngDatas> {
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Gado Gado',
                           style: TextStyle(
                             fontSize: 15,
@@ -153,7 +153,7 @@ class _mngDatasState extends State<mngDatas> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Rp. 12.000',
                           style: TextStyle(
                             fontSize: 15,
@@ -161,7 +161,7 @@ class _mngDatasState extends State<mngDatas> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        FloatingActionButton(
+                        const FloatingActionButton(
                           onPressed: null,
                           elevation: 0,
                           backgroundColor: Colors.transparent,
@@ -183,7 +183,7 @@ class _mngDatasState extends State<mngDatas> {
                         Container(
                           width: 50, // Set width as needed
                           height: 50, // Set height as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape
                                 .rectangle, // You can use other shapes like BoxShape.rectangle
                             image: DecorationImage(
@@ -192,7 +192,7 @@ class _mngDatasState extends State<mngDatas> {
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Gado Gado',
                           style: TextStyle(
                             fontSize: 15,
@@ -200,7 +200,7 @@ class _mngDatasState extends State<mngDatas> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Rp. 12.000',
                           style: TextStyle(
                             fontSize: 15,
@@ -208,7 +208,7 @@ class _mngDatasState extends State<mngDatas> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        FloatingActionButton(
+                        const FloatingActionButton(
                           onPressed: null,
                           elevation: 0,
                           backgroundColor: Colors.transparent,

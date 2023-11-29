@@ -9,7 +9,7 @@ import 'package:starbhak_fnb/screen/addData.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key); 
+  const MyApp({super.key}); 
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
       title: 'Starbhak Mart',
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => SplashScreen(),
-        'main': (context) => pilihanMenu(),
-        'data': (context) => addDatas(),
-        'manage': (context) => mngDatas(),
-        'cartPage': (context) => cartDt()
+        '/': (context) => const SplashScreen(),
+        'main': (context) => const pilihanMenu(),
+        'data': (context) => const addDatas(),
+        'manage': (context) => const mngDatas(),
+        'cartPage': (context) => const cartDt()
 
       },
     );
