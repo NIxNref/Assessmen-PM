@@ -21,10 +21,13 @@ class _addDatasState extends State<addDatas> {
     // Check and request storage permission
     var status = await Permission.storage.status;
     if (!status.isGranted) {
-      await Permission.storage.request();
-      status = await Permission.storage.status;
-      if (!status.isGranted) {
-        // Handle the case where the user denied storage permission
+      final result = await Permission.storage.request();
+      if (result.isDenied) {
+        // The user denied the permission, handle accordingly
+        return;
+      } else if (result.isPermanentlyDenied) {
+        // The user permanently denied the permission, prompt to open app settings
+        await openAppSettings();
         return;
       }
     }
@@ -124,11 +127,18 @@ class _addDatasState extends State<addDatas> {
                           Text('Harga Produk : $_price'),
                           Text('Kategori :  $dropdownValue'),
                           if (_imageUrl.isNotEmpty)
-                            Image.file(
-                              File(_imageUrl),
-                              width: 100,
-                              height: 100,
-                            ),
+                            _imageUrl.startsWith('http') ||
+                                    _imageUrl.startsWith('https')
+                                ? Image.network(
+                                    _imageUrl,
+                                    width: 100,
+                                    height: 100,
+                                  )
+                                : Image.file(
+                                    File(_imageUrl),
+                                    width: 100,
+                                    height: 100,
+                                  ),
                         ],
                       ),
                     );

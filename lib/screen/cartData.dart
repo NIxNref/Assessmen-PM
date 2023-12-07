@@ -9,6 +9,51 @@ class cartDt extends StatefulWidget {
 }
 
 class _cartDtState extends State<cartDt> {
+
+  int _count = 1;
+  int _count2 = 1;
+  int _count3 = 1;
+
+  void _incrementCount1() {
+    setState(() {
+      _count++;
+    });
+  }
+  void _incrementCount2() {
+    setState(() {
+      _count2++;
+    });
+  }
+  void _incrementCount3() {
+    setState(() {
+      _count3++;
+    });
+  }
+  void _decrementCount1() {
+    if (_count < 1) {
+      return;
+    }
+    setState(() {
+      _count--;
+    });
+  }
+  void _decrementCount2() {
+    if (_count2 < 1) {
+      return;
+    }
+    setState(() {
+      _count2--;
+    });
+  }
+  void _decrementCount3() {
+    if (_count3 < 1) {
+      return;
+    }
+    setState(() {
+      _count3--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,6 +135,27 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            GestureDetector(
+                              child: Icon(Icons.add, size: 22),
+                              onTap: _incrementCount1,
+                              ),
+                            Text(
+                              '${_count}',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            GestureDetector(
+                              child: Icon(Icons.remove, size: 22),
+                              onTap: _decrementCount1,
+                              ),
+                          ],
+                        ),
                         const Text(
                           'Rp. 12.000',
                           style: TextStyle(
@@ -137,6 +203,27 @@ class _cartDtState extends State<cartDt> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            GestureDetector(
+                              child: Icon(Icons.add, size: 22),
+                              onTap: _incrementCount2,
+                              ),
+                            Text(
+                              '${_count2}',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            GestureDetector(
+                              child: Icon(Icons.remove, size: 22),
+                              onTap: _decrementCount2,
+                              ),
+                          ],
+                        ),
                         const Text(
                           'Rp. 12.000',
                           style: TextStyle(
@@ -183,6 +270,27 @@ class _cartDtState extends State<cartDt> {
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.bold,
                           ),
+                        ),
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            GestureDetector(
+                              child: Icon(Icons.add, size: 22),
+                              onTap: _incrementCount3,
+                              ),
+                            Text(
+                              '${_count3}',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            GestureDetector(
+                              child: Icon(Icons.remove, size: 22),
+                              onTap: _decrementCount3,
+                              ),
+                          ],
                         ),
                         const Text(
                           'Rp. 12.000',
