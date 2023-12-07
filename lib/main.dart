@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
         'manage': (context) => const mngDatas(),
         'cartPage': (context) => const cartDt(),
         'profiles': (context) => const Prfl(),
-
       },
     );
   }
