@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Prfl extends StatelessWidget {
-  const Prfl({Key? key}) : super(key: key);
+  const Prfl({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       body: Column(
         children: [
@@ -15,7 +15,7 @@ class Prfl extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 250,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [Colors.cyan, Colors.blue],
                 begin: Alignment.topLeft,
@@ -25,12 +25,12 @@ class Prfl extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 50,
                   // Add your profile picture here
                   backgroundImage: AssetImage('assets/img/itsuki.jpg'),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 RichText(
                   text: TextSpan(
                     text: 'Panji Nugroho',
@@ -38,35 +38,35 @@ class Prfl extends StatelessWidget {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       foreground: Paint()
-                        ..shader = LinearGradient(
+                        ..shader = const LinearGradient(
                           colors: [Colors.cyan, Colors.lightGreen],
                         ).createShader(
-                          Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
+                          const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
                         ),
                     ),
                   ),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Text(
                   'https://github.com/NIxNref',
                   style: TextStyle(
                     fontSize: 16,
                     foreground: Paint()
-                      ..shader = LinearGradient(
+                      ..shader = const LinearGradient(
                         colors: [Colors.red, Colors.yellow],
                       ).createShader(
-                        Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
+                        const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
                       ),
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 // Add more profile details here
 
                 ElevatedButton(
                   onPressed: () {
                     // Handle edit profile logic
                   },
-                  child: Text('Edit Profile'),
+                  child: const Text('Edit Profile'),
                 ),
               ],
             ),
@@ -75,7 +75,7 @@ class Prfl extends StatelessWidget {
           Expanded(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Colors.cyan, Colors.blue],
                   begin: Alignment.topLeft,
@@ -92,7 +92,7 @@ class Prfl extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   RichText(
                     text: TextSpan(
                       text: 'Panji Nugroho',
@@ -100,15 +100,15 @@ class Prfl extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         foreground: Paint()
-                          ..shader = LinearGradient(
+                          ..shader = const LinearGradient(
                             colors: [Colors.cyan, Colors.lightGreen],
                           ).createShader(
-                            Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
+                            const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
                           ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
@@ -117,10 +117,10 @@ class Prfl extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         foreground: Paint()
-                          ..shader = LinearGradient(
+                          ..shader = const LinearGradient(
                             colors: [Colors.red, Colors.yellow],
                           ).createShader(
-                            Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
+                            const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
                           ),
                       ),
                     ),
@@ -132,15 +132,15 @@ class Prfl extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: Container(
-        padding: EdgeInsets.all(8),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.all(8),
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.cyan, Colors.blue],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
         ),
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(width: 8),
